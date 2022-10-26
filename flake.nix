@@ -20,7 +20,7 @@
             layers = [ ./notes ];
             layersString = [ "./notes" ];
             # port = 8080;
-            baseUrl = "/"; # Change to "/" (or remove it entirely) if using CNAME
+            baseUrl = "/emanote-template/"; # Change to "/" (or remove it entirely) if using CNAME
             allowBrokenLinks = true;
             # prettyUrls = true;
           };
