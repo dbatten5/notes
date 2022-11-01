@@ -1,5 +1,3 @@
-# STAT0032 Exercise Sheet 2
-
 ### Question 1
 
 We follow the steps in [Hypothesis testing procedure](202210151102.md).
@@ -55,4 +53,5 @@ $$
 
 Therefore, $T \backsim \mathcal{N}(\mu, \frac{\sigma^2}{n})$ and under $H_0$ we
 have $T \backsim \mathcal{N}\left( 0, \frac{\sigma^2}{n} \right)$
+
 

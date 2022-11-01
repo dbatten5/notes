@@ -1,5 +1,3 @@
-# STAT0032 Exercise Sheet 3
-
 ### Question 7 (and a bit of 8)
 
 $$

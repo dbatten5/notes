@@ -1,10 +1,8 @@
-# Barber Book Exercises
-
 ### 2.1
 
 $$
 n_{i,j}^k = \sum_{l} \underbrace{A_{ij}}_{\text{1 timestep}}\overbrace{n_{lj}^{k
-- 1}}^{\text{k-1 timesteps}}
+-1}}^{\text{k-1 timesteps}}
 $$
 
 Can write this in matrix form
@@ -33,30 +31,55 @@ $G''$. By the inductive step we have number of vertices = $V$ and number of
 edges = $V-1$. Therefore number of vertices in $G'$ is $V+1$ and number of edges
 in $G'$ is $V$.
 
-### 3.1
+### 2.8
+
+Start with small $N$, e.g. $N = 2$, this gives us 1 maximal clique.
+
+For $N = 4$:
+
+```mermaid
+flowchart LR
+
+  A((A)) --- C((C));
+  A --- D((D));
+  B((B)) --- C;
+  B --- D;
+```
+
+Each edge represents a maximal clique, therefore 4 maximal cliques.
+
+For $N = 6$:
+
+```mermaid
+flowchart LR
+  %%{ init: { 'flowchart': { 'curve': 'natural' } } }%%
+
+  A((A)) --- D((D));
+  A --- E((E));
+  A --- F((F));
+  B((B)) --- D;
+  B --- E;
+  B --- F;
+  C((C)) --- D;
+  C --- E;
+  C --- F;
+```
 
 ```dot
-digraph G {
-  P -> H;
-  P -> U;
-  D -> U;
-  U -> A;
+graph G {
+  rankdir="LR";
+
+  A -- D;
+  A -- E;
+  A -- F;
+  B -- D;
+  B -- E;
+  B -- F;
+  C -- D;
+  C -- E;
+  C -- F;
 }
 ```
 
-From the graph, we have that
+Again each edge represents a maximal clique, therefore 9 maximal cliques.
 
-$$
-P(P, A, D, H, U) = P(D)P(P)P(U|D,P)P(H|P)P(A|U)
-$$
-
-We are looking for $P(P=T|A=T,H=T)$
-
-$$
-\begin{align*}
-P(P=T|A=T,H=T) &= \frac{P(P=T,A=T,H=T)}
-{P(A=T,H=T)} \\[0.5em]
-\end{align*}
-$$
-
-Need to marginalize over the terms we don't have in the numerator
