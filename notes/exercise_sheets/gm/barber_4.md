@@ -21,7 +21,9 @@ that $\bold{W} = \bold{W}^{\top}$ from the previous expression.
 ### 4.4
 
 $$
-p(\bold{v}, \bold{h}) = \frac{1}{Z(\bold{W}, \bold{a}, \bold{b})}
+p(\bold{v}, \bold{h}) =
+p(v1, \ldots, v_T, h_1, \ldots, h_T) =
+\frac{1}{Z(\bold{W}, \bold{a}, \bold{b})}
 \exp \left(
 \bold{v}^{\top}\bold{W}\bold{h} + \bold{a}^{\top}\bold{v} + \bold{b}^{\top}\bold{h}
 \right)
@@ -43,9 +45,10 @@ p(\bold{h}|\bold{v}) &= \frac{p(\bold{h},\bold{v})}{p(\bold{v})} \\[0.5em]
 \cdot \exp \left( \bold{b}^{\top}\bold{h} \right)
 \\[0.5em]
 &= \frac{1}{Z'}\exp \left( \bold{v}^{\top}\bold{W}\bold{h} + \bold{b}^{\top}\bold{h} \right)  \\[0.5em]
-&= \frac{1}{Z'}\exp \left( 
-\sum_{j=1}^{n} b_j h_j
+&= \frac{1}{Z'}\exp \left(
+\sum_{j=1}^{n} b_j h_j + \sum_{j=1}^{n} \bold{v}^{\top}\underbrace{\bold{W}_{:,j}}_{\text{j col of W}}h_j
 \right)  \\[0.5em]
+&= \frac{1}{Z'} \prod \exp\left( b_jh_j + \bold{v}^{\top}\bold{W}_{:,j}h_j \right)   \\[0.5em]
 \end{align*}
 $$
 
