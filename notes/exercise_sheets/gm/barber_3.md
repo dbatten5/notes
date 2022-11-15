@@ -25,5 +25,3 @@ P(P=T|A=T,H=T) &= \frac{P(P=T,A=T,H=T)}
 $$
 
 Need to marginalize over the terms we don't have in the numerator
-
-
