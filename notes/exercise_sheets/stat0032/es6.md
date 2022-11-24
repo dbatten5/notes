@@ -31,3 +31,5 @@ variance increases, so iii is correct.
 d.) Opposite to above iv is correct.
 
 e.)
+
+### 5.
