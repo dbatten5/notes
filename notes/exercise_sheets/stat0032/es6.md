@@ -6,7 +6,7 @@ to have minimum $RSS$ since that's the criteria for $\mathcal{M}_p$. Best subset
 surely will end up with the model with smallest RSS as it looks at all possible
 models.
 
-b). 
+b).
 
 c).
 i.) True
@@ -22,7 +22,10 @@ all $\beta_i = 0$ to enforce the constraint. As $s$ increases then the $RSS$
 will decrease as the problem tends to an ordinary least squares solution, so iv
 is correct
 
-b.)
+**Correct**
+
+b.) You loose sparsity as $s \rightarrow \infty$ which may mean that the test
+RSS goes up. So ii is correct
 
 c.) When coefficients are pushed towards zero, variance is reduced. Therefore,
 as $s$ is increased, the coefficients likely move away from zero and the
